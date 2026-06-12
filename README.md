@@ -7,7 +7,7 @@
 The code has been tested with the following software stack:
 
 ```text
-CUDA: 11.8
+CUDA:         11.8
 Python:       3.10.0
 PyTorch:      2.4.0 
 TorchVision:  0.19.0

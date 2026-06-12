@@ -1,4 +1,5 @@
-# SCOPE
+# Diagnose Before Fine-Tuning: Support-Conditioned Operator Routing for Parameter-Efficient Vision Transformers<img width="415" height="47" alt="image" src="https://github.com/user-attachments/assets/8d268ae5-ff35-48f4-ac40-51cbfcc770e0" />
+
 
 
 ## Requirements

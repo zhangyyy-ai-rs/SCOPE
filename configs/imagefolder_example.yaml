@@ -1,0 +1,9 @@
+# Example public training configuration.
+data_root: /path/to/imagefolder_dataset
+model: vit_base_patch16_224
+pretrained: true
+epochs: 20
+batch_size: 64
+rank: 8
+layers: all
+route: auto

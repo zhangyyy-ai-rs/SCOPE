@@ -1,0 +1,5 @@
+Selector,Avg Acc,Params(M),Coverage,Note
+fixed AOFT,74.35653272502162,0.1674736842105263,19/19,single fixed route
+fixed DOBA,71.5363527859926,0.0582105263157894,19/19,single fixed DOBA route
+random route selector,74.00787250186842,0.23752970103713436,19/19,10k resampling; 95% CI 72.950-75.049
+support selector v2,76.37101935193569,0.1657655789473684,19/19,support-only; percentile 100.0% vs random

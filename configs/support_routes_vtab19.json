@@ -1,0 +1,217 @@
+{
+  "version": "support_only_v2_20260601",
+  "protocol": "support-only diagnostics; no validation/test/oracle route lookup",
+  "routes": {
+    "cifar": "evidence_geometry",
+    "caltech101": "state_bottleneck",
+    "dtd": "redundancy_aware_evidence",
+    "oxford_flowers102": "shared_diagnostic_basis",
+    "oxford_iiit_pet": "shared_diagnostic_basis",
+    "svhn": "flat_coordinate_rewrite",
+    "sun397": "orthogonal_tangent",
+    "patch_camelyon": "state_bottleneck",
+    "eurosat": "coordinate_rewrite",
+    "resisc45": "coordinate_rewrite",
+    "diabetic_retinopathy": "orthogonal_tangent",
+    "clevr_count": "state_bottleneck",
+    "clevr_dist": "relation_rewrite",
+    "dmlab": "state_bottleneck",
+    "kitti": "orthogonal_tangent",
+    "dsprites_loc": "state_bottleneck",
+    "dsprites_ori": "shared_diagnostic_basis",
+    "smallnorb_azi": "coordinate_rewrite",
+    "smallnorb_ele": "flat_orthogonal_tangent"
+  },
+  "details": [
+    {
+      "block": "Natural",
+      "dataset": "cifar",
+      "display": "CIFAR-100",
+      "scope_route": "evidence_geometry",
+      "operator": "Evidence Geometry Route",
+      "support_rule_id": "R03_semantic_fragment_evidence",
+      "support_reason": "high-rank but class-confusable support",
+      "paper_role": "write discriminative evidence for high-rank but class-confusable support"
+    },
+    {
+      "block": "Natural",
+      "dataset": "caltech101",
+      "display": "Caltech101",
+      "scope_route": "state_bottleneck",
+      "operator": "State Bottleneck Route",
+      "support_rule_id": "R04_many_class_state_bottleneck",
+      "support_reason": "many-class support already separable",
+      "paper_role": "repair low/mid-rank latent-state mismatch"
+    },
+    {
+      "block": "Natural",
+      "dataset": "dtd",
+      "display": "DTD",
+      "scope_route": "redundancy_aware_evidence",
+      "operator": "Redundancy-Aware Evidence Route",
+      "support_rule_id": "R02_texture_redundancy",
+      "support_reason": "high-frequency texture support with high effective rank",
+      "paper_role": "suppress repeated high-frequency tangent directions in texture-like support"
+    },
+    {
+      "block": "Natural",
+      "dataset": "oxford_flowers102",
+      "display": "Flowers102",
+      "scope_route": "shared_diagnostic_basis",
+      "operator": "Shared Diagnostic Basis Route",
+      "support_rule_id": "R01_saturated_shared_basis",
+      "support_reason": "nearest-centroid support already saturated",
+      "paper_role": "use a tiny shared basis for saturated or low-rank-collapsed support"
+    },
+    {
+      "block": "Natural",
+      "dataset": "oxford_iiit_pet",
+      "display": "Oxford-IIIT Pet",
+      "scope_route": "shared_diagnostic_basis",
+      "operator": "Shared Diagnostic Basis Route",
+      "support_rule_id": "R05_midclass_saturated_basis",
+      "support_reason": "mid-class separable low-interference support",
+      "paper_role": "use a tiny shared basis for saturated or low-rank-collapsed support"
+    },
+    {
+      "block": "Natural",
+      "dataset": "svhn",
+      "display": "SVHN",
+      "scope_route": "flat_coordinate_rewrite",
+      "operator": "Flat Coordinate Rewrite Route",
+      "support_rule_id": "R11_sharp_digit_coordinate",
+      "support_reason": "digit-like prototype collapse",
+      "paper_role": "coordinate rewrite with flatness for prototype-collapse tasks"
+    },
+    {
+      "block": "Natural",
+      "dataset": "sun397",
+      "display": "SUN397",
+      "scope_route": "orthogonal_tangent",
+      "operator": "Orthogonal Tangent Route",
+      "support_rule_id": "R00_many_class_head_dominated",
+      "support_reason": "very many classes; head-dominated support geometry",
+      "paper_role": "safe tangent-space rotation when support diagnostics show no reliable extra write locus"
+    },
+    {
+      "block": "Specialized",
+      "dataset": "patch_camelyon",
+      "display": "PatchCamelyon",
+      "scope_route": "state_bottleneck",
+      "operator": "State Bottleneck Route",
+      "support_rule_id": "R16_binary_state",
+      "support_reason": "binary low-rank state mismatch",
+      "paper_role": "repair low/mid-rank latent-state mismatch"
+    },
+    {
+      "block": "Specialized",
+      "dataset": "eurosat",
+      "display": "EuroSAT",
+      "scope_route": "coordinate_rewrite",
+      "operator": "Coordinate Rewrite Route",
+      "support_rule_id": "R13_lowclass_style_coordinate",
+      "support_reason": "coordinate/style shift",
+      "paper_role": "repair local coordinate/style shifts"
+    },
+    {
+      "block": "Specialized",
+      "dataset": "resisc45",
+      "display": "RESISC45",
+      "scope_route": "coordinate_rewrite",
+      "operator": "Coordinate Rewrite Route",
+      "support_rule_id": "R15_scene_style_coordinate",
+      "support_reason": "scene/spatial-style risk",
+      "paper_role": "repair local coordinate/style shifts"
+    },
+    {
+      "block": "Specialized",
+      "dataset": "diabetic_retinopathy",
+      "display": "Diabetic Retinopathy",
+      "scope_route": "orthogonal_tangent",
+      "operator": "Orthogonal Tangent Route",
+      "support_rule_id": "R17_small_highfreq_conservative",
+      "support_reason": "small-class high-frequency overfit risk",
+      "paper_role": "safe tangent-space rotation when support diagnostics show no reliable extra write locus"
+    },
+    {
+      "block": "Structured",
+      "dataset": "clevr_count",
+      "display": "CLEVR-Count",
+      "scope_route": "state_bottleneck",
+      "operator": "State Bottleneck Route",
+      "support_rule_id": "R09_count_state_collapse",
+      "support_reason": "count/state collapse",
+      "paper_role": "repair low/mid-rank latent-state mismatch"
+    },
+    {
+      "block": "Structured",
+      "dataset": "clevr_dist",
+      "display": "CLEVR-Distance",
+      "scope_route": "relation_rewrite",
+      "operator": "Relation Rewrite Route",
+      "support_rule_id": "R08_relation_collapse",
+      "support_reason": "relational geometry collapse",
+      "paper_role": "repair collapsed attention-relation geometry"
+    },
+    {
+      "block": "Structured",
+      "dataset": "dmlab",
+      "display": "DMLab",
+      "scope_route": "state_bottleneck",
+      "operator": "State Bottleneck Route",
+      "support_rule_id": "R10_state_rich_small_class",
+      "support_reason": "state-rich small-class support",
+      "paper_role": "repair low/mid-rank latent-state mismatch"
+    },
+    {
+      "block": "Structured",
+      "dataset": "kitti",
+      "display": "KITTI-Distance",
+      "scope_route": "orthogonal_tangent",
+      "operator": "Orthogonal Tangent Route",
+      "support_rule_id": "R18_small_geometric_conservative",
+      "support_reason": "small-class geometric support",
+      "paper_role": "safe tangent-space rotation when support diagnostics show no reliable extra write locus"
+    },
+    {
+      "block": "Structured",
+      "dataset": "dsprites_loc",
+      "display": "dSprites-Loc",
+      "scope_route": "state_bottleneck",
+      "operator": "State Bottleneck Route",
+      "support_rule_id": "R06_extreme_factor_state",
+      "support_reason": "extreme factor collapse",
+      "paper_role": "repair low/mid-rank latent-state mismatch"
+    },
+    {
+      "block": "Structured",
+      "dataset": "dsprites_ori",
+      "display": "dSprites-Ori",
+      "scope_route": "shared_diagnostic_basis",
+      "operator": "Shared Diagnostic Basis Route",
+      "support_rule_id": "R07_lowrank_factor_basis",
+      "support_reason": "low-rank factor support with prototype coupling",
+      "paper_role": "use a tiny shared basis for saturated or low-rank-collapsed support"
+    },
+    {
+      "block": "Structured",
+      "dataset": "smallnorb_azi",
+      "display": "SmallNORB-Azimuth",
+      "scope_route": "coordinate_rewrite",
+      "operator": "Coordinate Rewrite Route",
+      "support_rule_id": "R14_pose_weak_coordinate",
+      "support_reason": "weak pose separability",
+      "paper_role": "repair local coordinate/style shifts"
+    },
+    {
+      "block": "Structured",
+      "dataset": "smallnorb_ele",
+      "display": "SmallNORB-Elevation",
+      "scope_route": "flat_orthogonal_tangent",
+      "operator": "Flat Orthogonal Tangent Route",
+      "support_rule_id": "R12_pose_flat_orthogonal",
+      "support_reason": "sharp pose/factor support",
+      "paper_role": "orthogonal tangent repair with flatness bias for sharp pose/factor support"
+    }
+  ]
+}

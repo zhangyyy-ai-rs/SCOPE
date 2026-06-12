@@ -1,0 +1,7 @@
+Comparator,Mean Δ,Win/Tie/Loss,Note
+AOFT,0.39999999999999714,3/2/0,FGVC 5 datasets
+CVPT,0.9399999999999977,2/1/2,FGVC 5 datasets
+Adapter,-1.8599999999999965,3/0/2,FGVC 5 datasets
+LoRA+Adapter,-2.3800000000000012,3/0/2,FGVC 5 datasets
+Full fine-tuning,-3.219999999999999,4/0/1,FGVC 5 datasets
+VPT-D,-0.35999999999999943,3/0/2,FGVC 5 datasets

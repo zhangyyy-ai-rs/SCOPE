@@ -1,0 +1,43 @@
+# Frozen SCOPE support-diagnostic selector ledger.
+# Created: 2026-06-02
+# Purpose: preserve the paper-facing route rules without exposing implementation-backend names.
+selector_name: SCOPE-support-selector-v2
+frozen_at: "2026-06-01T21:45:00+08:00"
+backbone: ViT-B/16 ImageNet-21k npz
+protocol: VTAB-1K same split, same backbone, same training budget unless noted
+no_a800: true
+route_source: support_only_diagnostics_v2
+claim_boundary:
+  allowed: "Report as a support-conditioned PEFT routing framework over SCOPE primitives."
+  not_allowed: "Do not describe SCOPE as post-hoc selection among existing method names."
+routes:
+  caltech101: state_bottleneck
+  cifar: evidence_geometry
+  dtd: redundancy_aware_evidence
+  oxford_flowers102: shared_diagnostic_basis
+  oxford_iiit_pet: shared_diagnostic_basis
+  svhn: flat_coordinate_rewrite
+  sun397: orthogonal_tangent
+  eurosat: coordinate_rewrite
+  patch_camelyon: state_bottleneck
+  diabetic_retinopathy: orthogonal_tangent
+  resisc45: coordinate_rewrite
+  clevr_count: state_bottleneck
+  clevr_dist: relation_rewrite
+  dmlab: state_bottleneck
+  kitti: orthogonal_tangent
+  dsprites_loc: state_bottleneck
+  dsprites_ori: shared_diagnostic_basis
+  smallnorb_azi: coordinate_rewrite
+  smallnorb_ele: flat_orthogonal_tangent
+heldout_rule_v1:
+  fine_grained_high_class: shared_diagnostic_basis
+  fine_grained_vehicle_or_part_rigid: orthogonal_tangent
+  fine_grained_bird_species: shared_diagnostic_basis
+  saturated_or_easy_natural: shared_diagnostic_basis
+  default: state_bottleneck
+required_evidence:
+  - fixed_route_vs_random_vs_support_vs_oracle_selector
+  - support_diagnostic_drop_ablation
+  - heldout_fgvc_validation
+  - parameter_normalized_accuracy_gain

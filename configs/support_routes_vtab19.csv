@@ -1,0 +1,20 @@
+block,dataset,display,scope_route,operator,support_rule_id,support_reason,paper_role
+Natural,cifar,CIFAR-100,evidence_geometry,Evidence Geometry Route,R03_semantic_fragment_evidence,high-rank but class-confusable support,write discriminative evidence for high-rank but class-confusable support
+Natural,caltech101,Caltech101,state_bottleneck,State Bottleneck Route,R04_many_class_state_bottleneck,many-class support already separable,repair low/mid-rank latent-state mismatch
+Natural,dtd,DTD,redundancy_aware_evidence,Redundancy-Aware Evidence Route,R02_texture_redundancy,high-frequency texture support with high effective rank,suppress repeated high-frequency tangent directions in texture-like support
+Natural,oxford_flowers102,Flowers102,shared_diagnostic_basis,Shared Diagnostic Basis Route,R01_saturated_shared_basis,nearest-centroid support already saturated,use a tiny shared basis for saturated or low-rank-collapsed support
+Natural,oxford_iiit_pet,Oxford-IIIT Pet,shared_diagnostic_basis,Shared Diagnostic Basis Route,R05_midclass_saturated_basis,mid-class separable low-interference support,use a tiny shared basis for saturated or low-rank-collapsed support
+Natural,svhn,SVHN,flat_coordinate_rewrite,Flat Coordinate Rewrite Route,R11_sharp_digit_coordinate,digit-like prototype collapse,coordinate rewrite with flatness for prototype-collapse tasks
+Natural,sun397,SUN397,orthogonal_tangent,Orthogonal Tangent Route,R00_many_class_head_dominated,very many classes; head-dominated support geometry,safe tangent-space rotation when support diagnostics show no reliable extra write locus
+Specialized,patch_camelyon,PatchCamelyon,state_bottleneck,State Bottleneck Route,R16_binary_state,binary low-rank state mismatch,repair low/mid-rank latent-state mismatch
+Specialized,eurosat,EuroSAT,coordinate_rewrite,Coordinate Rewrite Route,R13_lowclass_style_coordinate,coordinate/style shift,repair local coordinate/style shifts
+Specialized,resisc45,RESISC45,coordinate_rewrite,Coordinate Rewrite Route,R15_scene_style_coordinate,scene/spatial-style risk,repair local coordinate/style shifts
+Specialized,diabetic_retinopathy,Diabetic Retinopathy,orthogonal_tangent,Orthogonal Tangent Route,R17_small_highfreq_conservative,small-class high-frequency overfit risk,safe tangent-space rotation when support diagnostics show no reliable extra write locus
+Structured,clevr_count,CLEVR-Count,state_bottleneck,State Bottleneck Route,R09_count_state_collapse,count/state collapse,repair low/mid-rank latent-state mismatch
+Structured,clevr_dist,CLEVR-Distance,relation_rewrite,Relation Rewrite Route,R08_relation_collapse,relational geometry collapse,repair collapsed attention-relation geometry
+Structured,dmlab,DMLab,state_bottleneck,State Bottleneck Route,R10_state_rich_small_class,state-rich small-class support,repair low/mid-rank latent-state mismatch
+Structured,kitti,KITTI-Distance,orthogonal_tangent,Orthogonal Tangent Route,R18_small_geometric_conservative,small-class geometric support,safe tangent-space rotation when support diagnostics show no reliable extra write locus
+Structured,dsprites_loc,dSprites-Loc,state_bottleneck,State Bottleneck Route,R06_extreme_factor_state,extreme factor collapse,repair low/mid-rank latent-state mismatch
+Structured,dsprites_ori,dSprites-Ori,shared_diagnostic_basis,Shared Diagnostic Basis Route,R07_lowrank_factor_basis,low-rank factor support with prototype coupling,use a tiny shared basis for saturated or low-rank-collapsed support
+Structured,smallnorb_azi,SmallNORB-Azimuth,coordinate_rewrite,Coordinate Rewrite Route,R14_pose_weak_coordinate,weak pose separability,repair local coordinate/style shifts
+Structured,smallnorb_ele,SmallNORB-Elevation,flat_orthogonal_tangent,Flat Orthogonal Tangent Route,R12_pose_flat_orthogonal,sharp pose/factor support,orthogonal tangent repair with flatness bias for sharp pose/factor support

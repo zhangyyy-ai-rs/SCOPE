@@ -1,0 +1,25 @@
+Method,Paper link(s),Status,Reproduction note
+AOFT,"AOFT, ICCV 2025",Published,Same-code reproduction of the approximately orthogonal adaptation route.
+VPT-Shallow,"VPT, ECCV 2022",Published,Visual Prompt Tuning with shallow prompt placement.
+VPT-Deep,"VPT, ECCV 2022",Published,Visual Prompt Tuning with deep prompt placement.
+SSF,"SSF, NeurIPS 2022",Published,Feature scaling and shifting baseline.
+NOAH,"NOAH, NeurIPS 2022",Published,Neural prompt search baseline; fixed subnet reproduced under our protocol.
+RepAdapter-B,RepAdapter,Published,RepAdapter block-side variant in our same-protocol code path.
+RepAdapter-A,RepAdapter,Published,RepAdapter attention-side variant in our same-protocol code path.
+Adapter,"Bottleneck Adapter, ICML 2019",Published primitive,"Classic bottleneck adapter primitive, implemented in the ViT transfer setting."
+AdaptFormer,"AdaptFormer, NeurIPS 2022",Published,ViT-specific adapter-style baseline.
+AdaptFormer-FPET,"AdaptFormer; FPET, CVPR 2025",Published components,FPET wrapper applied to AdaptFormer-style tuning.
+LoRA,"LoRA, ICLR 2022",Published,Low-rank adaptation baseline.
+LoRA-FPET,"LoRA; FPET, CVPR 2025",Published components,FPET wrapper applied to LoRA-style tuning.
+LoRA+Adapter,LoRA; Adapter,Composite baseline,Combination of LoRA-style and adapter-style tuning under the same protocol.
+FacT-style,FacT,Published-inspired,Factorized tuning style baseline reproduced under the same split/protocol.
+SPT-style,Prompt tuning family,Published-inspired primitive,"Sparse/small prompt-tuning style parameter-floor baseline; reported as style baseline, not a new standalone paper claim."
+BitFit,BitFit,Published primitive,Bias-only tuning baseline transferred into the ViT same-protocol comparison.
+CVPT,CVPT,Published / preprint,Conditional visual prompt tuning baseline reproduced where audited.
+Linear probing,Classical linear probing baseline,Classical baseline,Frozen ViT-B/16 backbone with trainable classifier head only.
+Full fine-tuning,Classical full fine-tuning baseline,Classical baseline,All ViT parameters are trainable; included as the upper-cost reference.
+DoRA,DoRA,Published,Weight-decomposed low-rank adaptation style baseline under the same split/protocol.
+VeRA,VeRA,Published,Vector-based random matrix adaptation baseline under the same split/protocol.
+OFT,OFT,Published,Orthogonal fine-tuning baseline reproduced under the same split/protocol.
+GOFT,GOFT,Published,Generalized orthogonal fine-tuning baseline reproduced under the same split/protocol.
+MOIL,MOIL,Published / recent baseline,Recent PEFT baseline reproduced under the same split/protocol where available.
